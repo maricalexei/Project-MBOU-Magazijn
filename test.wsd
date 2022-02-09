@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle hollow
+actor magazijnadmin
+actor superuser
+actor financialadmin
+actor student
+rectangle seemagazijn {
+    superuser -- (see magazijn)
+    superuser -- (order product)
+    superuser -- (request product)
+    superuser -- (approve orders)
+    financialadmin -- (see magazijn) 
+    financialadmin -- (approve orders)
+    (magazijnadmin) -- (see magazijn)
+    magazijnadmin -- (manage products)
+    (request product) -- student
+    (manage products) .> (take in products) : extends
+    (take in products) .> (send out products) : extends
+}
+@enduml
