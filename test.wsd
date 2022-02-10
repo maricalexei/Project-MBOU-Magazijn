@@ -6,16 +6,16 @@ actor warehouseadmin
 actor superuser
 actor financialadmin
 actor student
-rectangle seewarehouse {
-    superuser -- (seewarehouse)
-    superuser -- (order product)
-    superuser -- (request product)
-    superuser -- (approve orders)
-    financialadmin -- (seewarehouse) 
-    financialadmin -- (approve orders)
-    (warehouseadmin) -- (seewarehouse)
-    warehouseadmin -- (manage products)
-    (request product) -- student
+rectangle Warehouse {
+    superuser -- (seewarehouse) #line:purple;line.bold
+    superuser -- (order product) #line:purple;line.bold
+    superuser -- (request product) #line:purple;line.bold
+    superuser -- (approve orders) #line:purple;line.bold
+    financialadmin -- (seewarehouse) #line:blue;line.bold
+    financialadmin -- (approve orders) #line:blue;line.bold
+    (warehouseadmin) -- (seewarehouse) #line:black;line.bold
+    warehouseadmin -- (manage products) #line:black;line.bold
+    (request product) -- student #line:green;line.bold
     (manage products) .> (take in products) : extends
     (take in products) .> (send out products) : extends
 }
