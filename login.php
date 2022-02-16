@@ -59,12 +59,16 @@
   </div>
 </div>
 <!-- einde modal en form -->
+<!-- begin van de container-->
   <div class="container">
+ <!-- de login button -->   
 <div class="row">
   <div class="col-md-12 text-right">
     <button class="btn btn-info badge-pill" data-toggle="modal" data-target="#login" style="width:90px;"> Login </button>
   </div>
+  <!-- einde login button-->
 </div>
+<!-- einde container -->
 
 
 
