@@ -1,22 +1,26 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
+' Actor Style
 skinparam actorStyle hollow
-actor warehouseadmin
-actor superuser
-actor financialadmin
-actor student
+' actors
+actor warehouseadmin #line:black
+actor superuser #line:purple
+actor financialadmin #line:blue
+actor student #line:green
 rectangle Warehouse {
-    (seewarehouse) -- superuser  #line:purple;line.bold
+    ' in the box
+    (see warehouse) -- superuser  #line:purple;line.bold
     (order product) -- superuser  #line:purple;line.bold
     (request product) -- superuser  #line:purple;line.bold
     (approve orders) -- superuser  #line:purple;line.bold
-    (seewarehouse) -- financialadmin  #line:blue;line.bold
+    (see warehouse) -- financialadmin  #line:blue;line.bold
     (approve orders) -- financialadmin  #line:blue;line.bold
-    (seewarehouse) -- (warehouseadmin)  #line:black;line.bold
+    (see warehouse) -- (warehouseadmin)  #line:black;line.bold
     (manage products) -- warehouseadmin  #line:black;line.bold
     student -- (request product)  #line:green;line.bold
     (take in products) .> (manage products)  : extends
     (send out products) .> (take in products)  : extends
+    
 }
 @enduml
