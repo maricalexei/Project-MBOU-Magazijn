@@ -62,7 +62,7 @@
   <div class="container">
 <div class="row">
   <div class="col-md-12 text-right">
-    <button class="btn btn-success badge-pill" data-toggle="modal" data-target="#login" style="width: 80px;"> Login </button>
+    <button class="btn btn-info badge-pill" data-toggle="modal" data-target="#login" style="width:90px;"> Login </button>
   </div>
 </div>
 
