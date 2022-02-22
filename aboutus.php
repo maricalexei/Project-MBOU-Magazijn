@@ -19,7 +19,7 @@
             </div>
             <div class="col4">
                 <div class="image-section">
-                    <img src="img/.jpg">
+                    <img src="img/aboutus.jpg">
                 </div>
             </div>
         </div>
