@@ -114,12 +114,12 @@
     <div class="row">
       <div class="col-md-9 "></div>
       <div class="col-md-2 text-right">
-        <button class="btn btn-info badge-pill" data-toggle="modal" data-target="#login" style="width:90px;"> Login
+        <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#login" style="width:90px;"> Login
         </button>
       </div>
       <!-- register button -->
       <div class="col-md-1 text-right">
-        <button class="btn btn-warning badge-pill" data-toggle="modal" data-target="#Register" style="width:90px;">
+        <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#Register" style="width:90px;">
           Register </button>
       </div>
       <!-- einde register button -->
