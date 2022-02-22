@@ -1,12 +1,13 @@
-<div class="section">
     <div class="container">
         <div class="row">
             <div class="col-4">
                 <div class="content-section">
+                    <!-- title -->
                     <div class="title">
                         <h1>About Us</h1>
                         <hr>
                     </div>
+                    <!-- text -->
                     <div class="content">
                         <h3>This is us</h3>
                         <p><br>We are Warehouse MBO Utrecht<br>
@@ -17,6 +18,7 @@
                     </div>
                 </div>
             </div>
+            <!-- image -->
             <div class="col4">
                 <div class="image-section">
                     <img src="img/aboutus.jpg">
@@ -24,4 +26,4 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
