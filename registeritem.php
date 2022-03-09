@@ -47,20 +47,48 @@
                 </div>
                 <!-- hier begint de body van de form waarvan een modul gemaakt is-->
                 <div class="modal-body">
-                    <br>
                     <!-- form waar email word ingevuld -->
+                    <h6>Bent een student of leraar</h6>
+                    <form>
+                        <input type="radio" id="teacher" name="fav_language" value="teacher">
+                        <label for="teacher">Leraar</label><br>
+                        <input type="radio" id="student" name="fav_language" value="teacher">
+                        <label for="student">Student</label><br>
+                    </form>
+                    <br>
+                    <h6>Uw naam</h6>
                     <div class="form-floating mb-3 sm-12">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Vul hier uw email in">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Uw naam">
                     </div>
-                            <img src="img/mbologo.png">
-                <!-- hier is de footer van de modal waar je de knop namen of functie  registreer en login kunt gebruiken -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success" name="submit-login">Add item</button>
+                    <br>
+                    <h6>Hoe heet het item wat u wilt toevoegen in het magazijn</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Naam item">
+                    </div>
+                    <br>
+                    <form>
+                        <label for="quantity">Hoeveel items wilt u toevoegen:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="999999">
+                    </form>
+                    <br>
+                    <h6>Wanneer komt het item aan in het magazijn</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="date" class="form-control" id="floatingInput" placeholder="Aankomst in magazijn">
+                    </div>
+                    <br>
+                    <h6>Tot wanneer blijft het item in het magazijn</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="date" class="form-control" id="floatingInput"
+                            placeholder="Tot wanneer blijft het in het magazijn">
+                    </div>
+                    <!-- hier is de footer van de modal waar je de knop namen of functie  registreer en login kunt gebruiken -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" name="submit-login">Add item</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- einde modal login en form -->
+        <!-- einde modal login en form -->
     </div>
     </div>
     </div>
