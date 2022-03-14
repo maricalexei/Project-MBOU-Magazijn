@@ -20,9 +20,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="home.php">test</a>
-        <a class="nav-link" href="#">test
-        </a>
+        <a class="nav-link active" aria-current="page" href="home.php">home</a>
+        <a class="nav-link" href="#">test</a>
+        <a class="nav-link" href="#">test</a>
         <a class="nav-link" href="#">test</a>
         <!-- include van loginphp zodat deze in de navbar zit -->
       </div>
