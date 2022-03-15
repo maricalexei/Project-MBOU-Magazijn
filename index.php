@@ -12,9 +12,9 @@
     <title>Homepage</title>
   </head>
   <body>
-  <div class="container-sm">
+  <!-- <div class="container-sm">
   <img src="./img/MBO_Utrecht.png" class="rounded float-end" alt="./MBO_Utrecht.png">
-</div>
+</div> -->
 
     <main>
         <section class="container-fluid">
@@ -27,10 +27,13 @@
         </div>
 </section>
 
+
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">
+    <img src="./img/MBO_Utrecht.png" width="60" height="60" alt="">
+  </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,12 +48,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Add item</a>
 </li>
-
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search for an item" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
