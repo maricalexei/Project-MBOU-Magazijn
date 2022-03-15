@@ -12,9 +12,6 @@
     <title>Homepage</title>
   </head>
   <body>
-  <!-- <div class="container-sm">
-  <img src="./img/MBO_Utrecht.png" class="rounded float-end" alt="./MBO_Utrecht.png">
-</div> -->
 
     <main>
         <section class="container-fluid">
@@ -26,7 +23,6 @@
 
         </div>
 </section>
-
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,6 +47,33 @@
     </div>
   </div>
 </nav>
+
+<h2><center>Wij zijn blij om eindelijk met jullie ons eigen magazijn te delen!</center></h2>
+
+<!-- card 1 -->
+<div class="row">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="./img/magazijn.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Wij mogen eindelijk ons eigen warenhuis met jullie delen!</p>
+  </div>
+</div>
+
+<!-- card 2 -->
+<div class="row">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="./img/gereedschap.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Ons nieuw materiaal !</p>
+  </div>
+</div>
+
+
+
+
+
+  
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
