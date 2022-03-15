@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 15 feb 2022 om 15:16
+-- Gegenereerd op: 15 mrt 2022 om 16:45
 -- Serverversie: 5.7.36
 -- PHP-versie: 7.4.26
 
@@ -20,8 +20,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `magazijnmboutrecht`
 --
-CREATE DATABASE IF NOT EXISTS `magazijnmboutrecht` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `magazijnmboutrecht`;
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `items`
+--
+
+DROP TABLE IF EXISTS `items`;
+CREATE TABLE IF NOT EXISTS `items` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `brand` varchar(255) NOT NULL,
+  `amount` int(100) NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
