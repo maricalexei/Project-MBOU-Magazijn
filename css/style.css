@@ -1,4 +1,4 @@
-#container {
+/* #container {
     width: 50vw;
     height: 70vh;
 
@@ -9,4 +9,14 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     border-bottom: 1px solid black;
+} */
+
+.row {
+    display: flex; 
+    margin: 0 auto;
+    width: 50%;
+}
+
+*{
+    color:red!important;
 }

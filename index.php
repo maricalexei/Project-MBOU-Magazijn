@@ -36,13 +36,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Warehouse</a>
+          <a class="nav-link" href="/warehouse.php">Warehouse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add item</a>
+          <a class="nav-link" href="/add.php">Add item</a>
 </li>
     </div>
   </div>
@@ -52,22 +52,21 @@
 
 <!-- card 1 -->
 <div class="row">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./img/magazijn.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">Wij mogen eindelijk ons eigen warenhuis met jullie delen!</p>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="./img/magazijn.jpg" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Wij mogen eindelijk ons eigen warenhuis met jullie delen!</p>
+    </div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="./img/gereedschap.jpg" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Ons nieuw materiaal !</p>
+    </div>
   </div>
 </div>
-
-<!-- card 2 -->
-<div class="row">
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="./img/gereedschap.jpg" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">Ons nieuw materiaal !</p>
-  </div>
-</div>
-
 
 
 
