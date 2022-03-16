@@ -16,7 +16,6 @@
     margin: 0 auto;
     width: 50%;
 }
-
-*{
-    color:red!important;
+.card{
+    margin: 25px;
 }

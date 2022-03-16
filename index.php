@@ -6,20 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
 
+  <?php include "css/style.css" ?>
+  
+</style>
     <title>Homepage</title>
   </head>
   <body>
 
     <main>
+      
         <section class="container-fluid">
         <div class="row">
             <div class="col-12 px-0">
                 <?php include("./content.php") ?>
 
-            </div>
+            </div>  
 
         </div>
 </section>
@@ -45,6 +50,9 @@
           <a class="nav-link" href="/add.php">Add item</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/order.php">Order item</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/list.php">List</a>
         </li>
     </div>
@@ -67,6 +75,7 @@ h1 {
   margin-left: 40px;
 }
 </style>
+
 <!-- card 1 -->
 <div class="row">
   <div class="card" style="width: 18rem;">
@@ -84,7 +93,6 @@ h1 {
     </div>
   </div>
 </div>
-
 
 
 
