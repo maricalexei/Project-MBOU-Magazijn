@@ -13,23 +13,24 @@
   <?php include "css/style.css" ?>
   
 </style>
-    <title>Homepage</title>
-  </head>
-  <body>
 
+<title>Homepage</title>
+  </head>
+<body>
+  <img src="./img/MBO_Utrecht.png" alt="RestaurantGeorge" class="img-fluid w-30 mx-auto d-block" style="width: 15%;">
     <main>
         <section class="container-fluid">
         <div class="row">
             <div class="col-12 px-0">
                 <?php include("./content.php") ?>
-
             </div>  
 
         </div>
 </section>
 
+<p style="background-image: url('img/MBO-utrecht-bg.jpg');">
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
     <img src="./img/MBO_Utrecht.png" width="60" height="60" alt="">
@@ -56,7 +57,7 @@
         </li>
         <div class="topnav">
           <!-- login button -->
-  <div class="login-container">
+  <!-- <div class="login-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Username" name="username">
       <input type="text" placeholder="Password" name="psw">
@@ -66,9 +67,8 @@
 </div>
     </div>
   </div>
-</nav>
+</nav>  -->
 
-<?php include_once("./login.php");?>
 
 <h2><center>Wij zijn blij om eindelijk met jullie ons eigen magazijn te delen!</center></h2>
 <p1><center>We zijn blij om onze eigen spullen nu veilig te kunnen opbergen maar ook te kunnen uitlenen voor studenten die daar baat bij hebben</center></p1> 
@@ -104,10 +104,6 @@ h1 {
     </div>
   </div>
 </div>
-
-
-
-  
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
