@@ -18,7 +18,6 @@
   <body>
 
     <main>
-      
         <section class="container-fluid">
         <div class="row">
             <div class="col-12 px-0">
@@ -55,9 +54,21 @@
         <li class="nav-item">
           <a class="nav-link" href="/list.php">List</a>
         </li>
+        <div class="topnav">
+          <!-- login button -->
+  <div class="login-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
     </div>
   </div>
 </nav>
+
+<?php include_once("./login.php");?>
 
 <h2><center>Wij zijn blij om eindelijk met jullie ons eigen magazijn te delen!</center></h2>
 <p1><center>We zijn blij om onze eigen spullen nu veilig te kunnen opbergen maar ook te kunnen uitlenen voor studenten die daar baat bij hebben</center></p1> 
