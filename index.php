@@ -43,13 +43,30 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/add.php">Add item</a>
-</li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/list.php">List</a>
+        </li>
     </div>
   </div>
 </nav>
 
 <h2><center>Wij zijn blij om eindelijk met jullie ons eigen magazijn te delen!</center></h2>
+<p1><center>We zijn blij om onze eigen spullen nu veilig te kunnen opbergen maar ook te kunnen uitlenen voor studenten die daar baat bij hebben</center></p1> 
+<p2><center>Kom er meteen achter welke items jij nu al kan huren door op 'list' te drukken!</center><p2>
+<p3><center>Of voeg een item toe door op 'add item' te drukken en doe een bijdrage aan de gemeenschap!</center><p3>
 
+
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
 <!-- card 1 -->
 <div class="row">
   <div class="card" style="width: 18rem;">
