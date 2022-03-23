@@ -13,13 +13,17 @@
   </head>
 <body>
 <main>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-12 px-0">
-                <?php include("./navigaton.php"); ?>
-            </div>
-        </div>
-    </section>
+<!--    The first section used for the navigation-->
+    
+<!--    <section class="container-fluid">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12 px-0">-->
+<!--                --><?php //include("./navigaton.php"); ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    Second section used to include the content-->
+    
     <section class="container-fluid">
         <div class="row">
             <div class="col-12 px-0">
