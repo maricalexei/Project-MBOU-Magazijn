@@ -1,8 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+// temp database connection
+define("SERVERNAME", "localhost");
+define("USERNAME", "root");
+define("PASSWORD", "");
+define("DBNAME", "magazijnmboutrecht");
 
+$conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
+// names 
+    if(isset($_POST['submit'])){
+        $role = $_POST['role'];
+        $name = $_POST['name'];
+        $item = $_POST['item'];
+        $amount = $_POST['amount'];
+        $arrivaldate = $_POST['arrivaldate'];
+        $untilldate = $_POST['untilldate'];
+// sql query
+if(mysqli_query($conn, "INSERT INTO `additem`   (`id`, `role`, `name`, `item`, `amount`, `arrivaldate`, `untilldate`) VALUES (NULL,   '$role', '$name', '$item', '$amount', '$arrivaldate', '$untilldate')")){
+    // if succeeds
+    header("Location: ./index.php?content=message&alert=succes");
+
+}else{
+    // if failes
+        header("Location: ./index.php?content=message&alert=failed");
+    }
+}
+?>
+<!-- links -->
 <head>
-    <!-- benodigde links voor de form modul-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,15 +52,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <!-- einde van de links-->
 </head>
 
 <body>
 
 
-
-
-    <!-- Modal voor additem -->
+<!-- form start -->
+<form method="POST" action="">
     <div class="modal fade" id="additem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -45,29 +69,59 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <!-- hier begint de body van de form waarvan een modul gemaakt is-->
+                <!-- role choose -->
                 <div class="modal-body">
+                    <h6>Bent een student of leraar</h6>
+                    <select class="form-select" name="role" aria-label="Default select example">
+                        <option value="teacher">teacher</option>
+                        <option value="student">student</option>
+                    </select>
                     <br>
-                    <!-- form waar email word ingevuld -->
+                    <br>
+                    <!-- name input -->
+                    <h6>Uw naam</h6>
                     <div class="form-floating mb-3 sm-12">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Vul hier uw email in">
+                        <input type="text" name="name" class="form-control" placeholder="Uw naam">
                     </div>
-                            <img src="img/mbologo.png">
-                <!-- hier is de footer van de modal waar je de knop namen of functie  registreer en login kunt gebruiken -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success" name="submit-login">Add item</button>
+                    <br>
+                    <!-- item name input -->
+                    <h6>Hoe heet het item wat u wilt toevoegen in het magazijn</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="text" class="form-control" name="item" placeholder="Naam item">
+                    </div>
+                    <br>
+                    <!-- amount input -->
+                    <form>
+                        <label for="quantity">Hoeveel items wilt u toevoegen:</label>
+                        <input type="number" name="amount" name="amount" min="1" max="999999">
+                    </form>
+                    <br>
+                    <br>
+                    <!-- arrivaldate date chooser -->
+                    <h6>Wanneer komt het item aan in het magazijn</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="date" class="form-control" name="arrivaldate" placeholder="Aankomst in magazijn">
+                    </div>
+                    <br>
+                    <!-- how long does the item stay in the warehouse -->
+                    <h6>Tot wanneer blijft het item in het magazijn</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="date" class="form-control" name="untilldate"
+                            placeholder="Tot wanneer blijft het in het magazijn">
+                    </div>
+                    <div class="modal-footer">
+                        <!-- submit button -->
+                    <button type="submit" name="submit" class="btn btn-secondary btn-lg btn-block">Add Item</button>
+                    </form>     
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- einde modal login en form -->
     </div>
     </div>
-    </div>
-    <!-- einde modal register -->
-    <!-- begin van de container-->
+    <!-- modal -->
     <div class="container">
-        <!-- de additem button -->
         <div class="row">
             <div class="col-md-9 "></div>
             <div class="col-md-2 text-right">
@@ -76,29 +130,6 @@
                 </button>
             </div>
         </div>
-        <!-- einde container -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </body>
 
