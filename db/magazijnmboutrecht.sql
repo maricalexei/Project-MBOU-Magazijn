@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 15 mrt 2022 om 16:45
+-- Gegenereerd op: 29 mrt 2022 om 13:41
 -- Serverversie: 5.7.36
 -- PHP-versie: 7.4.26
 
@@ -35,6 +35,29 @@ CREATE TABLE IF NOT EXISTS `items` (
   `amount` int(100) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `role`
+--
+
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE IF NOT EXISTS `role` (
+  `role` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`role`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `role`
+--
+
+INSERT INTO `role` (`role`, `description`) VALUES
+('student', 'The student of MBO Utrecht'),
+('financial_admin', 'The financial admin of MBO Utrecht, this role manages everything for the expenses'),
+('warehouse_admin', 'The warehouse admin makes sure the warehouse is uptodate and manages the inventory'),
+('super_user', 'The super user has complete control of the warehouse and every service');
 
 -- --------------------------------------------------------
 
