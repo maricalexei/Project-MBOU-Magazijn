@@ -5,16 +5,6 @@ require_once ("./login_links.php");
 ?>
 <body>
 
-  <?php
-  if(isset($_POST["submit-login"])){
-  $email = sanitize($_POST["email"]);
-  $password = sanitize($_POST["password"]);
-
-  $sql = "SELECT * FROM `users` WHERE `email` = '$email'";
-
-  $result = mysqli_query($conn, $sql);
-  }
-?>
   <!-- Modal voor login -->
   <form action="" method="POST">
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
