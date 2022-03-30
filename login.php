@@ -142,8 +142,8 @@
       </div>
       <!-- register button -->
       <div class="col-md-1 text-right">
-        <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#Register" style="width:90px;">
-          Register </button>
+        <a href="register.php"> <button class="btn btn-primary badge-pill" data-toggle="" data-target="#Register"  style="width:90px;">
+          Register </button></a> 
       </div>
       <!-- einde register button -->
       <!-- einde login button-->

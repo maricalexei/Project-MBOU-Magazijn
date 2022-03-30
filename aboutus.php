@@ -1,3 +1,4 @@
+<?php include_once("./navigation.php");?>
     <div class="container">
         <div class="row">
             <div class="col-4">
