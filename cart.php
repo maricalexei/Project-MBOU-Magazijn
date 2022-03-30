@@ -49,7 +49,7 @@ if (isset($_POST['remove'])){
     <div class="row px-5">
         <div class="col-md-7">
             <div class="shopping-cart">
-                <h6>Mijn Cart</h6>
+                <h6>Mijn winkelwagen</h6>
                 <hr>
 
                 <?php
@@ -68,7 +68,7 @@ if (isset($_POST['remove'])){
                             }
                         }
                     }else{
-                        echo "<h5>Cart is Leeg</h5>";
+                        echo "<h5>Winkelwagen is Leeg</h5>";
                     }
                   
                 ?>

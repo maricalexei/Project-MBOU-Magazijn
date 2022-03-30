@@ -1,15 +1,8 @@
 img{
     max-width: 100%;
     height: auto;
-    /* background: lightblue; */
-    /* background: radial-gradient(white 30%, rgb(119, 184, 191) 70%); */
+    
 }
-
-/* .fa-star,
-.fa-star-half{
-    color: yellowgreen;
-    padding: 3% 0;
-} */
 
 #cart_count{
     text-align: center;
