@@ -13,7 +13,6 @@ img{
 .shopping-cart{
     padding: 3% 0;
 }
-
 .cart-items + .cart-items{
     padding: 2% 0;
 }
