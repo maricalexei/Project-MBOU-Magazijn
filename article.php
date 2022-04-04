@@ -1,14 +1,14 @@
 <?php
-
+session_start();
 require_once ('create_db.php');
 require_once ('component.php');
 
 
 // create instance of Createdb class
-$database = new CreateDb("product", "product");
+$database = new CreateDb("magazijnmboutrecht", "product");
 
 if (isset($_POST['add'])){
-    /// print_r($_POST['product_id']);
+    // print_r($_POST['product_id']);
     if(isset($_SESSION['cart'])){
 
         $item_array_id = array_column($_SESSION['cart'], "product_id");
