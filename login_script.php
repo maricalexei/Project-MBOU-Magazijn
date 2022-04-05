@@ -1,7 +1,6 @@
 <?php
 require_once ("./functions.php");
 require_once ("./connect_db.php");
-require_once ("./login_links.php");
 
 $email = sanitize($_POST["email"]);
 $password = sanitize($_POST["password"]);
@@ -10,7 +9,10 @@ if(empty($email) || empty($password)){
     header("Location: ./index.php?content=message&alert=loginform-empty");
 } else {
 //    The sql quere to search for the email in the database
-    $sql = "SELECT * FROM `users` WHERE `email` = `$email`";
+    $sql = "SELECT * FROM `user` WHERE `email` = '$email'";
+    var_dump($sql);
+    var_dump($_POST);
+
     $result = mysqli_query($conn, $sql);
 //    Email is unknown
     if(!mysqli_num_rows($result)){
@@ -20,19 +22,19 @@ if(empty($email) || empty($password)){
 
         $_SESSION["email"] = $record["email"];
         $_SESSION["password"] = $record["password"];
-        $_SESSION["userrole"] = $record["role"];
+        $_SESSION["userrole"] = $record["userrole_id"];
 
-        switch ($record["role"]){
-            case 'super_admin':
+        switch ($record["userrole_id"]){
+            case '3':
                 header("Location: ./index.php?content=s-home");
                 break;
-            case 'warehouse_admin':
+            case '2':
                 header("Location: ./index.php?content=w-home");
                 break;
-            case 'financial_admin':
+            case '1':
                 header("Location: ./index.php?content=f-home");
                 break;
-            case 'student':
+            case '0':
                 header("Location: ./index.php?content=st-home");
                 break;
         }

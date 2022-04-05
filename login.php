@@ -1,12 +1,9 @@
 <?php
-require_once ("./functions.php");
-require_once ("./connect_db.php");
 require_once ("./login_links.php");
 ?>
 <body>
-
   <!-- Modal voor login -->
-  <form action="" method="POST">
+  <form action="./index.php?content=login_script" method="post">
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -104,4 +101,3 @@ require_once ("./login_links.php");
     <!-- einde container -->
   </div>
 </body>
-
