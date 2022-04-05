@@ -1,4 +1,5 @@
 <?php
+
 $alert = (isset($_GET["alert"]))? $_GET["alert"]: "default";
 $email = (isset($_GET["email"]))? $_GET["email"]: "";
 $pwh = (isset($_GET["pwh"]))? $_GET["pwh"]: "";

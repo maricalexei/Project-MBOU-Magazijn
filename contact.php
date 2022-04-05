@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -85,11 +85,7 @@ li a:hover:not(.active) {
       }
 </style>
 <body>
-<ul>
-  <li><a href="#home">Dashboard</a></li>
-  <li><a class="active" href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+<?php include("./navigation.php"); ?>
  <div class="container">
      <div class="container-form">
          <form action="#">

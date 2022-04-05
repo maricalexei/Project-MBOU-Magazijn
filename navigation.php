@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
       <!-- dit is de mbo logo -->
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="index.php">
       <img src="./img/mbologo.png" alt="" width="100" height="70" class="d-inline-block align-text-top">
     </a>
     <!-- einde mbo logo -->
@@ -20,9 +20,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="home.php">home</a>
-        <a class="nav-link" href="#">test</a>
-        <a class="nav-link" href="#">test</a>
+        <a class="nav-link active" aria-current="page" href="index.php">home</a>
+        <a class="nav-link" href="aboutus.php">About Us</a>
+        <a class="nav-link" href="contact.php">Contact</a>
         <a class="nav-link" href="#">test</a>
         <!-- include van loginphp zodat deze in de navbar zit -->
       </div>
