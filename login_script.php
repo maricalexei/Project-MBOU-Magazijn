@@ -2,6 +2,7 @@
 require_once ("./functions.php");
 require_once ("./connect_db.php");
 
+//Cleaning up the variables so no html injections can occur
 $email = sanitize($_POST["email"]);
 $password = sanitize($_POST["password"]);
 //submit-login
@@ -25,15 +26,19 @@ if(empty($email) || empty($password)){
         $_SESSION["userrole"] = $record["userrole_id"];
 
         switch ($record["userrole_id"]){
+//            Case for super user
             case '3':
                 header("Location: ./index.php?content=s-home");
                 break;
+//                Case for warehouse admin;
             case '2':
                 header("Location: ./index.php?content=w-home");
                 break;
+//                Case for financial admin
             case '1':
                 header("Location: ./index.php?content=f-home");
                 break;
+//                Case for student
             case '0':
                 header("Location: ./index.php?content=st-home");
                 break;
