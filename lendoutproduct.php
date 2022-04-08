@@ -10,6 +10,7 @@ define("DBNAME", "magazijnmboutrecht");
 $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 // names 
     if(isset($_POST['submit'])){
+        //echo "Hoi";exit();
         $role = $_POST['role'];
         $naam = $_POST['uitleennaam'];
         $achternaam = $_POST['uitleenachternaam'];
@@ -17,14 +18,58 @@ $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
         $mobielnummer = $_POST['telefoonnummer'];
         $leendatum = $_POST['leendatum'];
         $terugdatum = $_POST['terugdatum'];
-// sql query
-if(mysqli_query($conn, "INSERT INTO `lendoutinfo` (`id`, `role`, `naam`, `achternaam`, `studentnummer`, `mobielnummer`, `leendatum`, `terugdatum`) VALUES (NULL,   '$role', '$naam', '$achternaam', '$studentnummer', '$mobielnummer', `$leendatum`, '$terugdatum')")){
-    // if succeeds
-    header("Location: ./index.php?content=message&alert=succes");
 
-}else{
+if (empty($naam)){
+    echo '<script> alert("U heeft de naam niet ingevuld"); </script>';
+    exit;
+}
+else if (empty($achternaam)){
+    echo '<script> alert("U heeft de achternaam niet ingevuld"); </script>';
+    exit;
+}
+else if (empty($studentnummer)){
+    echo '<script> alert("U heeft de studentennummer niet ingevuld"); </script>';
+    exit;
+}
+else if (empty($mobielnummer)){
+    echo '<script> alert("U heeft de mobiele nummer niet ingevuld"); </script>';
+    exit;
+}
+else if (empty($leendatum)){
+    echo '<script> alert("U heeft niet ingevuld wanneer het word uitgeleend"); </script>';
+    exit;
+}
+else if (empty($terugdatum)){
+    echo '<script> alert("U heeft niet ingevuld wanneer het product terug gebracht word"); </script>';
+    exit;
+}
+        
+// sql query
+$sql = "INSERT INTO `lendoutinfo` (`id`, 
+                                   `role`, 
+                                   `naam`, 
+                                   `achternaam`, 
+                                   `studentnummer`, 
+                                   `mobielnummer`, 
+                                   `leendatum`, 
+                                   `terugdatum`) 
+                           VALUES (NULL,   
+                                   '$role', 
+                                   '$naam', 
+                                   '$achternaam', 
+                                   '$studentnummer', 
+                                   '$mobielnummer', 
+                                   '$leendatum', 
+                                   '$terugdatum')";
+// echo $sql;exit();
+if(mysqli_query($conn, $sql)){
+    // if succeeds
+    header("Location: ./index.php?content=message&alert=lendoutinfo-succes");
+
+//}else{
+    
     // if failes
-        header("Location: ./index.php?content=message&alert=failed");
+        //header("Location: ./index.php?content=message&alert=lendoutinfo-failed");
     }
 }
 ?>

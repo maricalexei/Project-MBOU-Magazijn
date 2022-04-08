@@ -156,6 +156,18 @@ switch($alert) {
             </div>';
         header("Refresh: 3; ./index.php?content=calendar");
         break;
+    case "lendoutinfo-succes":
+        echo '<div class="alert alert-success mt-5 w-50 mx-auto text-center" role="alert">
+            De gegevens zijn succesvol opgeslagen.
+            </div>';
+        header("Refresh: 3; ./index.php?content=lendoutproduct");
+        break;
+    case "lendoutinfo-failed":
+        echo '<div class="alert alert-danger mt-5 w-50 mx-auto text-center" role="alert">
+            Het is niet gelukt om de gegevens op te slaan, probeer het opnieuw.
+             </div>';
+        header("Refresh: 3; ./index.php?content=lendoutproduct");
+        break;
 
 //    default:
 //      header("Location: ./index.php?content=home");
