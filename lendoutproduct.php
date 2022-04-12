@@ -2,15 +2,10 @@
 <html lang="en">
 <?php
 // temp database connection
-define("SERVERNAME", "localhost");
-define("USERNAME", "root");
-define("PASSWORD", "");
-define("DBNAME", "magazijnmboutrecht");
+include_once("./connect_db.php");
 
-$conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
-// names 
     if(isset($_POST['submit'])){
-        //echo "Hoi";exit();
+        $product = $_POST['product'];
         $role = $_POST['role'];
         $naam = $_POST['uitleennaam'];
         $achternaam = $_POST['uitleenachternaam'];
@@ -20,33 +15,38 @@ $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
         $terugdatum = $_POST['terugdatum'];
 
 if (empty($naam)){
-    echo '<script> alert("U heeft de naam niet ingevuld"); </script>';
+    echo '<script> alert("U heeft de naam niet ingevuld!"); </script>';
+    exit;
+}
+else if (empty($product)){
+    echo '<script> alert("U heeft niet ingevuld welk product u uitleend!"); </script>';
     exit;
 }
 else if (empty($achternaam)){
-    echo '<script> alert("U heeft de achternaam niet ingevuld"); </script>';
+    echo '<script> alert("U heeft de achternaam niet ingevuld!"); </script>';
     exit;
 }
 else if (empty($studentnummer)){
-    echo '<script> alert("U heeft de studentennummer niet ingevuld"); </script>';
+    echo '<script> alert("U heeft de studentennummer niet ingevuld!"); </script>';
     exit;
 }
 else if (empty($mobielnummer)){
-    echo '<script> alert("U heeft de mobiele nummer niet ingevuld"); </script>';
+    echo '<script> alert("U heeft de mobiele nummer niet ingevuld!"); </script>';
     exit;
 }
 else if (empty($leendatum)){
-    echo '<script> alert("U heeft niet ingevuld wanneer het word uitgeleend"); </script>';
+    echo '<script> alert("U heeft niet ingevuld wanneer het word uitgeleend!"); </script>';
     exit;
 }
 else if (empty($terugdatum)){
-    echo '<script> alert("U heeft niet ingevuld wanneer het product terug gebracht word"); </script>';
+    echo '<script> alert("U heeft niet ingevuld wanneer het product terug gebracht word!"); </script>';
     exit;
 }
         
 // sql query
 $sql = "INSERT INTO `lendoutinfo` (`id`, 
-                                   `role`, 
+                                   `product`,
+                                   `role`,
                                    `naam`, 
                                    `achternaam`, 
                                    `studentnummer`, 
@@ -54,6 +54,7 @@ $sql = "INSERT INTO `lendoutinfo` (`id`,
                                    `leendatum`, 
                                    `terugdatum`) 
                            VALUES (NULL,   
+                                   '$product',
                                    '$role', 
                                    '$naam', 
                                    '$achternaam', 
@@ -122,9 +123,10 @@ if(mysqli_query($conn, $sql)){
                         <option value="teacher">Docent</option>
                         <option value="student">Student</option>
                     </select>
-                    <br>
-                    <br>
-                    <!-- name input -->
+                    <h6>Welk product word uitgeleend?</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="text" name="product" class="form-control" placeholder="product naam">
+                    </div>
                     <h6>Naam student/docent</h6>
                     <div class="form-floating mb-3 sm-12">
                         <input type="text" name="uitleennaam" class="form-control" placeholder="Naam">
@@ -137,18 +139,15 @@ if(mysqli_query($conn, $sql)){
                     <div class="form-floating mb-3 sm-12">
                         <input type="text" name="studentnummer" class="form-control" placeholder="voorbeeld: 000000">
                     </div>
-                    <!-- item name input -->
                     <h6>Mobiele nummer</h6>
                     <div class="form-floating mb-3 sm-12">
                         <input type="text" class="form-control" name="telefoonnummer" placeholder="06123456789  ">
                     </div>
-                    <!-- arrivaldate date chooser -->
                     <h6>Wanneer word de artikel uitgeleend</h6>
                     <div class="form-floating mb-3 sm-12">
                         <input type="date" class="form-control" name="leendatum" placeholder="wanneer word het uitgeleend">
                     </div>
                     <br>
-                    <!-- how long does the item stay in the warehouse -->
                     <h6>Tot wanneer word het uitgeleend</h6>
                     <div class="form-floating mb-3 sm-12">
                         <input type="date" class="form-control" name="terugdatum"
@@ -171,7 +170,7 @@ if(mysqli_query($conn, $sql)){
             <div class="col-md-9 "></div>
             <div class="col-md-2 text-right">
                 <button class="btn btn-info badge-pill" data-toggle="modal" data-target="#lendoutinfo" style="width:150px;">
-                    Gegevens invoeren
+                    Gegevens invullen
                 </button>
             </div>
         </div>

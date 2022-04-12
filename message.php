@@ -160,7 +160,7 @@ switch($alert) {
         echo '<div class="alert alert-success mt-5 w-50 mx-auto text-center" role="alert">
             De gegevens zijn succesvol opgeslagen.
             </div>';
-        header("Refresh: 3; ./index.php?content=lendoutproduct");
+        header("Refresh: 3; ./index.php?content=lendoutoverview");
         break;
     case "lendoutinfo-failed":
         echo '<div class="alert alert-danger mt-5 w-50 mx-auto text-center" role="alert">

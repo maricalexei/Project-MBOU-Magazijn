@@ -23,7 +23,7 @@
         <a class="nav-link active" aria-current="page" href="index.php">home</a>
         <a class="nav-link" href="index.php?content=aboutus">About Us</a>
         <a class="nav-link" href="index.php?content=contact">Contact</a>
-        <a class="nav-link" href="#">test</a>
+        <a class="nav-link" href="index.php?content=lendoutoverview">overview lendout </a>
         <!-- include van loginphp zodat deze in de navbar zit -->
       </div>
       <?php include_once("./login.php");?>
