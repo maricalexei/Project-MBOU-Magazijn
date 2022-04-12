@@ -7,7 +7,7 @@
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <style>
   
@@ -58,10 +58,7 @@
      margin-right: 270px;
      margin-left: 270px;
     }
-    .icon {
-        width: 28px;
-        margin-right: 0.7rem;
-      }
+   
 </style>
 <body>
 <header id="header">
@@ -82,12 +79,13 @@
        
     </nav>
 </header>
- <div class="container">
+<div class="container">
      <div class="container-form">
          <form action="#">
          <h2 class="heading heading-yellow">Contact</h2>
+         <hr>
          <div class="row row-col-2">
-          _____________________________________________________________
+         
           <br>
               <br>
               <div>
@@ -97,28 +95,21 @@
                 <br>
                 Nummer: 06 12345678(12 18 uur, niet beschikbaar in het weekend)
                 <br>
+                <br>
                 Email: magazijnt@mboutrecht.nl
               </h3>
-
               <hr>
-
-
-
               <h3>Locatie: Utrecht</h3>
               </div>
-
               </div>
                         <div class="col"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5907106589993!2d5.157540315987322!3d52.08718017596639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c668a2ee3d4063%3A0x98813670b98f268d!2sDaltonlaan%20200%2C%203584%20BJ%20Utrecht!5e0!3m2!1sen!2snl!4v1633288418629!5m2!1sen!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                           <br>
                           <br>
-                          ____________________________________________
-                      
-                        
+                         
                         </div>
                       </div>
                       </div>
                       
-
               </div>
            </body>
         </html>
