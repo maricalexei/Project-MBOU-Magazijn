@@ -15,20 +15,7 @@ $records = "";
 while ($record = mysqli_fetch_assoc($result)) {
     $records .= "<tr>
                 <th scope='row'>" . $record["id"] . "</th>
-                <td>" . $record["product"] ."</td/>
-                <td> " . $record["role"] . "</td>
-                <td>" . $record["naam"] . "</td>
-                <td>" . $record["achternaam"] ."</td/>
-                <td>" . $record["studentnummer"] ."</td/>   
-                <td>" . $record["mobielnummer"] ."</td/>
-                <td>" . $record["leendatum"] ."</td/>
-                <td>" . $record["terugdatum"] ."</td/>
-
-                
-                <td>
-                 
-                    </a>
-                </td>
+                <td>" . $record["product"] ."</td/>   
                </tr>"; }
 ?>
 
@@ -57,18 +44,7 @@ while ($record = mysqli_fetch_assoc($result)) {
   <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Product</th>
-      <th scope="col">Rol</th>
-      <th scope="col">Naam</th>
-      <th scope="col">Achternaam</th>
-      <th scope="col">Studentnummer</th>
-      <th scope="col">Mobielnummer</th>
-      <th scope="col">Leendatum</th>
-      <th scope="col">Terugdatum</th>
-      
-
-
-
+      <th scope="col">Producten</th>
     </tr>
   </thead>
   <tbody>
@@ -78,9 +54,6 @@ while ($record = mysqli_fetch_assoc($result)) {
     </tbody>
     </table>
         </div>
-        </div>
-        <div class="row">
-           
         </div>
         </main>
 
