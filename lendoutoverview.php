@@ -43,33 +43,15 @@ while ($record = mysqli_fetch_assoc($result)) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
-
+<br>
 <div class="row">
   <div class="col-3">
-      <?php include_once("./lendoutproduct.php");?>
-  </div>
-
-  <div class="col-12">
-      <a class="btn btn-info badge-pill" href="/Project-MBOU-Magazijn/index.php?content=lendoutread" style="width:150px;">Bekijk gegevens</a>
+      <a class="btn btn-warning badge-pill" href="/Project-MBOU-Magazijn/index.php?content=lendoutread" style="width:400px;">Uigeleend product bekijken / Product uitlenen</a>
   </div>
 </div>
+<br>
 
     <main class="container">
-      <div class="row">
-        <div class="col-12">
-         </div>                                
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-5"></div>
-      <div class="col-7">
-      </div>
-    </div>
-    <div class="row">       
-</div>
-        <div class="row">
-        <div class="col-12">
-        
         <!-- op deze plek komt de tabel -->
         <table class="table table-hover">
   <thead>

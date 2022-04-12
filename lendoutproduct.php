@@ -169,7 +169,7 @@ if(mysqli_query($conn, $sql)){
         <div class="row">
             <div class="col-md-9 "></div>
             <div class="col-md-2 text-right">
-                <button class="btn btn-info badge-pill" data-toggle="modal" data-target="#lendoutinfo" style="width:150px;">
+                <button class="btn btn-primary badge-pill" data-toggle="modal" data-target="#lendoutinfo" style="width:150px;">
                     Gegevens invullen
                 </button>
             </div>

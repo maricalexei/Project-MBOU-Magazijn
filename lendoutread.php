@@ -45,19 +45,14 @@ while ($record = mysqli_fetch_assoc($result)) {
   </head>
   <body>
     <main class="container">
-      <div class="row">
-        <div class="col-12">
-         </div>                                
-      </div>
-    </div>
     <div class="row">
-        <div class="col-5"></div>
-      <div class="col-8">
-      <a href="/Project-MBOU-Magazijn/index.php?content=lendoutoverview" type="button" class="btn btn-success btn-lg btn-block">Ga terug naar product overview</a>
+        <div class="col-8">
+    <a href="/Project-MBOU-Magazijn/index.php?content=lendoutoverview" type="button" class="btn btn-warning btn-lg btn-block">Ga terug naar product overview</a>
+        </div>
+      <div class="col-5">
+      <?php include_once("./lendoutproduct.php");?>
       </div>
     </div>
-    <div class="row">       
-</div>
         <div class="row">
         <div class="col-12">
         
