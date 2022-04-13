@@ -168,6 +168,18 @@ switch($alert) {
              </div>';
         header("Refresh: 3; ./index.php?content=lendoutproduct");
         break;
+    case "additem-succes":
+        echo '<div class="alert alert-danger mt-5 w-50 mx-auto text-center" role="alert">
+            Het is succesvol gelukt om de item toe te voegen.
+             </div>';
+        header("Refresh: 1; ./index.php?content=lendoutoverview");
+        break;
+    case "additem-failed":
+        echo '<div class="alert alert-danger mt-5 w-50 mx-auto text-center" role="alert">
+            Het is niet gelukt om de item toe te voegen.
+             </div>';
+        header("Refresh: 1; ./index.php?content=lendoutoverview");
+        break;
 
 //    default:
 //      header("Location: ./index.php?content=home");

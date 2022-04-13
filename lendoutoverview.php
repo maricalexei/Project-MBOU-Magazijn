@@ -1,11 +1,7 @@
 <?php
 include("./connect_db.php");
 
-
-
-
-
-$sql = ("SELECT * FROM `lendoutinfo`");
+$sql = ("SELECT * FROM `additem`");
 
 // dit is de functie die de quary $sql via de verbinding $conn naar de database stuurt. 
 $result =mysqli_query($conn, $sql);
@@ -15,7 +11,14 @@ $records = "";
 while ($record = mysqli_fetch_assoc($result)) {
     $records .= "<tr>
                 <th scope='row'>" . $record["id"] . "</th>
-                <td>" . $record["product"] ."</td/>   
+                <td>" . $record["item"] ."</td/>   
+                <td>" . $record["amount"] ."</td/>   
+                <td>
+                <a href='./lendoutoverviewdelete.php?id=" . $record["id"]  . "'>
+                        <img src='img\b_drop.png' alt='cross'>
+                    </a>
+                <td/>
+
                </tr>"; }
 ?>
 
@@ -34,6 +37,8 @@ while ($record = mysqli_fetch_assoc($result)) {
 <div class="row">
   <div class="col-3">
       <a class="btn btn-warning badge-pill" href="/index.php?content=lendoutread" style="width:400px;">Uigeleende producten bekijken / Producten uitlenen</a>
+      <?php include("./registeritem.php"); ?>
+
   </div>
 </div>
 <br>
@@ -45,6 +50,10 @@ while ($record = mysqli_fetch_assoc($result)) {
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Producten</th>
+      <th scope="col">Hoeveelheden</th>
+      <th scope="col">Verwijder item</th>
+
+
     </tr>
   </thead>
   <tbody>
