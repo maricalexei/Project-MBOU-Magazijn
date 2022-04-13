@@ -16,7 +16,8 @@ while ($record = mysqli_fetch_assoc($result)) {
     $records .= "<tr>
                 <th scope='row'>" . $record["id"] . "</th>
                 <td>" . $record["product"] ."</td/>
-                <td> " . $record["role"] . "</td>
+                <td>" . $record["productnummer"] ."</td/>
+                <td>" . $record["role"] . "</td>
                 <td>" . $record["naam"] . "</td>
                 <td>" . $record["achternaam"] ."</td/>
                 <td>" . $record["studentnummer"] ."</td/>   
@@ -24,7 +25,11 @@ while ($record = mysqli_fetch_assoc($result)) {
                 <td>" . $record["leendatum"] ."</td/>
                 <td>" . $record["terugdatum"] ."</td/>
 
-                
+                <td>
+                    <a href='./lendoutinfoupdate.php?id=" . $record["id"]  . "'>
+                        <img src='./img/b_edit.png' alt='pencil'>
+                    </a>
+              
                 <td>
                     <a href='./lendoutinfodelete.php?id=" . $record["id"]  . "'>
                         <img src='img\b_drop.png' alt='cross'>
@@ -59,17 +64,23 @@ while ($record = mysqli_fetch_assoc($result)) {
         
         <!-- op deze plek komt de tabel -->
         <table class="table table-hover">
-  <thead>
+  <thead >
     <tr>
-      <th scope="col">id</th>
-      <th scope="col">product</th>
-      <th scope="col">rol</th>
-      <th scope="col">naam</th>
-      <th scope="col">achternaam</th>
-      <th scope="col">studentnummer</th>
-      <th scope="col">mobielnummer</th>
-      <th scope="col">leendatum</th>
-      <th scope="col">terugdatum</th>
+      <th scope="col"></th>
+      <th scope="col">Product</th>
+      <th scope="col">Product nummer</th>
+      <th scope="col">Rol</th>
+      <th scope="col">Naam</th>
+      <th scope="col">Achternaam</th>
+      <th scope="col">Studentnummer</th>
+      <th scope="col">Mobielnummer</th>
+      <th scope="col">Leendatum</th>
+      <th scope="col">Terugdatum</th>
+      <th scope="col">Gegevens aanpassen</th>
+      <th scope="col">Gegevens verwijderen</th>
+
+
+
 
 
 

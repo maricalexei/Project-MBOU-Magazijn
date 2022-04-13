@@ -5,8 +5,8 @@
 include_once("./connect_db.php");
 
     if(isset($_POST['submit'])){
-        $id = $_POST['id'];
         $product = $_POST['product'];
+        $productnummer = $_POST['productnummer'];
         $role = $_POST['role'];
         $naam = $_POST['uitleennaam'];
         $achternaam = $_POST['uitleenachternaam'];
@@ -21,17 +21,17 @@ if (empty($naam)){
 
     exit;
 }
-else if (empty($id)){
-    echo '<script> alert("U heeft de product id niet meegegeven!"); </script>';
-    header("Refresh: 1; ./index.php?content=lendoutread");
-
-    exit;
-}
 else if (empty($product)){
     echo '<script> alert("U heeft niet ingevuld welk product u uitleend!"); </script>';
     header("Refresh: 1; ./index.php?content=lendoutread");
 
     exit;
+}
+else if (empty($productnummer)){
+    echo '<script> alert("U heeft niet ingevuld wat de product nummer is!"); </script>';
+    header("Refresh: 1; ./index.php?content=lendoutread");
+    
+    exit;    
 }
 else if (empty($achternaam)){
     echo '<script> alert("U heeft de achternaam niet ingevuld!"); </script>';
@@ -67,6 +67,7 @@ else if (empty($terugdatum)){
 // sql query
 $sql = "INSERT INTO `lendoutinfo` (`id`, 
                                    `product`,
+                                   `productnummer`,
                                    `role`,
                                    `naam`, 
                                    `achternaam`, 
@@ -75,8 +76,8 @@ $sql = "INSERT INTO `lendoutinfo` (`id`,
                                    `leendatum`, 
                                    `terugdatum`) 
                            VALUES (NULL,   
-                                   '$id',
                                    '$product',
+                                   '$productnummer',
                                    '$role', 
                                    '$naam', 
                                    '$achternaam', 
@@ -145,13 +146,13 @@ if(mysqli_query($conn, $sql)){
                         <option value="teacher">Docent</option>
                         <option value="student">Student</option>
                     </select>
-                    <h6>Geef het id op van het product</h6>
-                    <div class="form-floating mb-3 sm-12">
-                        <input type="text" name="id" class="form-control" placeholder="product id">
-                    </div>
                     <h6>Welk product word uitgeleend?</h6>
                     <div class="form-floating mb-3 sm-12">
                         <input type="text" name="product" class="form-control" placeholder="product naam">
+                    </div>
+                    <h6>Voer de product nummer in</h6>
+                    <div class="form-floating mb-3 sm-12">
+                        <input type="text" name="productnummer" class="form-control" placeholder="product nummer">
                     </div>
                     <h6>Naam student/docent</h6>
                     <div class="form-floating mb-3 sm-12">

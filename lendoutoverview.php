@@ -13,7 +13,14 @@ while ($record = mysqli_fetch_assoc($result)) {
                 <th scope='row'>" . $record["id"] . "</th>
                 <td>" . $record["item"] ."</td/>   
                 <td>" . $record["amount"] ."</td/>   
+                <td>" . $record["role"] ."</td/>
                 <td>
+                <td>  
+                <td>
+                    <a href='./lendoutoverviewupdate.php?id=" . $record["id"]  . "'>
+                        <img src='./img/b_edit.png' alt='pencil'>
+                    </a>
+              <td/>
                 <a href='./lendoutoverviewdelete.php?id=" . $record["id"]  . "'>
                         <img src='img\b_drop.png' alt='cross'>
                     </a>
@@ -49,9 +56,15 @@ while ($record = mysqli_fetch_assoc($result)) {
   <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Producten</th>
-      <th scope="col">Hoeveelheden</th>
-      <th scope="col">Verwijder item</th>
+      <th scope="col">Product</th>
+      <th scope="col">Hoeveelheid</th>
+      <th scope="col">Bedoeld voor</th>
+      <th scope="col"></th>
+      <th scope="col"></th>      
+      <th scope="col">Item aanpassen</th>
+      <th scope="col">Item verwijderen</th>
+
+    
 
 
     </tr>
