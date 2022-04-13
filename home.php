@@ -9,17 +9,14 @@
     </section>
     <!-- card 1 -->
     <div class="row">
-        <div class="col-9">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/magazijn.jpg" alt="Card image cap">
             <div class="card-body">
                 <p class="card-text">Wij mogen eindelijk ons eigen warenhuis met jullie delen!</p>
             </div>
-        </div></div>
+        </div>
 
         <!-- card 2 -->
-    
-        <div class="col-3">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./img/gereedschap.jpg" alt="Card image cap">
             <div class="card-body">
@@ -27,5 +24,4 @@
             </div>
         </div>
     </div>
-</div>
 </main>
