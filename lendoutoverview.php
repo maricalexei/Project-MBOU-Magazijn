@@ -33,7 +33,7 @@ while ($record = mysqli_fetch_assoc($result)) {
 <br>
 <div class="row">
   <div class="col-3">
-      <a class="btn btn-warning badge-pill" href="/Project-MBOU-Magazijn/index.php?content=lendoutread" style="width:400px;">Uigeleende producten bekijken / Producten uitlenen</a>
+      <a class="btn btn-warning badge-pill" href="/index.php?content=lendoutread" style="width:400px;">Uigeleende producten bekijken / Producten uitlenen</a>
   </div>
 </div>
 <br>

@@ -48,7 +48,7 @@ while ($record = mysqli_fetch_assoc($result)) {
     <div class="row">
         <div class="col-8">
             <br>
-    <a href="/Project-MBOU-Magazijn/index.php?content=lendoutoverview" type="button" class="btn btn-warning badge-pill btn-lg btn-block">Ga terug naar product overview</a>
+    <a href="index.php?content=lendoutoverview" type="button" class="btn btn-warning badge-pill btn-lg btn-block">Ga terug naar product overview</a>
         </div>
       <div class="col-5">
       <?php include_once("./lendoutproduct.php");?>
