@@ -6,7 +6,7 @@ include_once("./connect_db.php");
 
     if(isset($_POST['submit'])){
         $product = $_POST['product'];
-        $productnummer = $_POST['productnummer'];
+        $nummer = $_POST['nummer'];
         $role = $_POST['role'];
         $naam = $_POST['uitleennaam'];
         $achternaam = $_POST['uitleenachternaam'];
@@ -27,7 +27,7 @@ else if (empty($product)){
 
     exit;
 }
-else if (empty($productnummer)){
+else if (empty($nummer)){
     echo '<script> alert("U heeft niet ingevuld wat de product nummer is!"); </script>';
     header("Refresh: 1; ./index.php?content=lendoutread");
     
@@ -67,7 +67,7 @@ else if (empty($terugdatum)){
 // sql query
 $sql = "INSERT INTO `lendoutinfo` (`id`, 
                                    `product`,
-                                   `productnummer`,
+                                   `nummer`,
                                    `role`,
                                    `naam`, 
                                    `achternaam`, 
@@ -77,7 +77,7 @@ $sql = "INSERT INTO `lendoutinfo` (`id`,
                                    `terugdatum`) 
                            VALUES (NULL,   
                                    '$product',
-                                   '$productnummer',
+                                   '$nummer',
                                    '$role', 
                                    '$naam', 
                                    '$achternaam', 
@@ -152,7 +152,7 @@ if(mysqli_query($conn, $sql)){
                     </div>
                     <h6>Voer de product nummer in</h6>
                     <div class="form-floating mb-3 sm-12">
-                        <input type="text" name="productnummer" class="form-control" placeholder="product nummer">
+                        <input type="text" name="nummer" class="form-control" placeholder="product nummer">
                     </div>
                     <h6>Naam student/docent</h6>
                     <div class="form-floating mb-3 sm-12">

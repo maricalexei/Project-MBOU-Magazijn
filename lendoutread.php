@@ -16,7 +16,7 @@ while ($record = mysqli_fetch_assoc($result)) {
     $records .= "<tr>
                 <th scope='row'>" . $record["id"] . "</th>
                 <td>" . $record["product"] ."</td/>
-                <td>" . $record["productnummer"] ."</td/>
+                <td>" . $record["nummer"] ."</td/>
                 <td>" . $record["role"] . "</td>
                 <td>" . $record["naam"] . "</td>
                 <td>" . $record["achternaam"] ."</td/>
