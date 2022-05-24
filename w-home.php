@@ -32,13 +32,12 @@
     $records = "";
 
     while ($record = mysqli_fetch_assoc($result)) {
-          $records .= "<tr><td>" . $record["role"] . "</td> " .
+          $records .= "<tr><td>" . $record["id"] . "</td> " .
                                 "<td>" . $record["name"] . "</td>" .
                                 "<td>" . $record["brand"] . "</td> " .
-                                "<td>" . $record["amount"] . "</td> " .
-                                "<td>" . ($record["update"]) . "</td> " .
-                                "<td>" . ($record["delete"]) . " </td>";
-        var_dump($record);
+                                "<td>" . $record["amount"] . "</td> "; 
+                               
+        // var_dump($record);
     }
   
 
@@ -73,13 +72,12 @@
             <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">id</th>>
+                            <th scope="col">id</th>
                             <th scope="col">name</th>
                             <th scope="col">brand</th>
                             <th scope="col">amount</th>
                             
-                            <th scope="col">DELETE</th>
-                            <th scope="col">UPDATE</th>
+                          
                         </tr>
                     </thead>
                     <tbody>
