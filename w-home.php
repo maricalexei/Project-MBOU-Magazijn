@@ -23,8 +23,6 @@
    
 
 
-
-
     $sql = "SELECT * FROM `items`";
 
     $result = mysqli_query($conn, $sql);
