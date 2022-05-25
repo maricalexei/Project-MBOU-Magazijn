@@ -80,6 +80,8 @@
     </nav>
 </header>
 <div class="container">
+=======
+ <div class="container">
      <div class="container-form">
          <form action="#">
          <h2 class="heading heading-yellow">Contact</h2>

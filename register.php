@@ -123,7 +123,7 @@
                                 <button type="submit" class="submit-btn">Versturen</button>
                                 <input type="checkbox"><span>Remember me</span>
                          </form>
-                            <a href="./login.php"><p>Ik heb een account</p></a>
+                            <a href="./index.php"><p>Ik heb een account</p></a>
                             <a href="">wachtwoord vergeten</a>
                             <a href="./index.php">Home</a>
                       

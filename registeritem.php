@@ -2,12 +2,8 @@
 <html lang="en">
 <?php
 // temp database connection
-define("SERVERNAME", "localhost");
-define("USERNAME", "root");
-define("PASSWORD", "");
-define("DBNAME", "magazijnmboutrecht");
+// include("./connect_db.php");
 
-$conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 // names 
     if(isset($_POST['submit'])){
         $role = $_POST['role'];
@@ -19,11 +15,11 @@ $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 // sql query
 if(mysqli_query($conn, "INSERT INTO `additem`   (`id`, `role`, `name`, `item`, `amount`, `arrivaldate`, `untilldate`) VALUES (NULL,   '$role', '$name', '$item', '$amount', '$arrivaldate', '$untilldate')")){
     // if succeeds
-    header("Location: ./index.php?content=message&alert=succes");
+    header("Location: ./index.php?content=message&alert=additem-succes");
 
 }else{
     // if failes
-        header("Location: ./index.php?content=message&alert=failed");
+        header("Location: ./index.php?content=message&alert=additem-failed");
     }
 }
 ?>
