@@ -1,8 +1,11 @@
 <header id="header">
-    <nav class="navbar navbar-expand-lg" style="background: white">
-        <a href="Dasboard.php" class="navbar-brand">
+    <nav class="navbar navbar-expand-lg  navbar-light bg-light" style="background: white">
+    <a class="navbar-brand" href="#">
+      <img src="./img/mbologo.png" alt="" width="100" height="70" class="d-inline-block align-text-top">
+    </a>
+        <a href="index.php" class="navbar-brand">
             <h3 class="px-5" style="color:black">
-               Dashboard
+               Home
             </h3>
         </a>
         <a href="article.php" class="navbar-brand">

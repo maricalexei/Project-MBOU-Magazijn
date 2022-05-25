@@ -1,9 +1,10 @@
 <?php
 
+session_start();
 require_once ("create_db.php");
 require_once ("component.php");
 
-$db = new CreateDb("product", "product");
+$db = new CreateDb("magazijnmboutrecht", "product");
 
 if (isset($_POST['remove'])){
   if ($_GET['action'] == 'remove'){
