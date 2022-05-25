@@ -11,7 +11,7 @@ Super-user:
 * Nieuwe artikelen bestellen. [ ] 
 * Bestellingen goedkeuren/weigeren [ ]
 * Artikelen aanvragen [ ]
-* Magazijn in zien. [ ]
+* Magazijn in zien. [x]
 
 Student
 ----
@@ -28,7 +28,7 @@ Warehoue-admin
 Financial-admin
 ----
 * Kan bestellingen goedkeuren/weigeren [ ]
-* Magazijn in zien [ ]
+* Magazijn in zien [x]
 
 Extra must haves
 ----
